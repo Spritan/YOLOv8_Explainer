@@ -37,7 +37,15 @@ pip install YOLOv8-Explainer
 from YOLOv8_Explainer import yolov8_heatmap, display_images
 
 model = yolov8_heatmap(
-    weight="/location/model.pt", conf_threshold=0.4, renormalize=False,
+    weight="/location/model.pt", 
+        conf_threshold=0.4, 
+        device = "cpu", 
+        method = "EigenCAM", 
+        layer=[10, 12, 14, 16, 18, -3],
+        backward_type="all",
+        ratio=0.02,
+        show_box=True,
+        renormalize=False,
 )
 
 imagelist = model(
@@ -51,3 +59,5 @@ display_images(imagelist)
 You can choose between the following CAM Models for version 0.0.2:
 
 `GradCAM` , `HiResCAM`, `GradCAMPlusPlus`, `XGradCAM` , `LayerCAM`, `EigenGradCAM` and `EigenCAM`.
+
+You can add a single image or a list of `PIL` images to be used by the `CAM`. The output will be a corresponding list of images.
