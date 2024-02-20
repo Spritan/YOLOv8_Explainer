@@ -56,7 +56,7 @@ display_images(imagelist)
 
 ```
 
-You can choose between the following CAM Models for version 1.0:
+You can choose between the following CAM Models for version 0.0.2:
 
 `GradCAM` , `HiResCAM`, `GradCAMPlusPlus`, `XGradCAM` , `LayerCAM`, `EigenGradCAM` and `EigenCAM`.
 
