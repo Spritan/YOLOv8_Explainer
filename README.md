@@ -34,17 +34,17 @@ pip install YOLOv8-Explainer
 from YOLOv8_Explainer import yolov8_heatmap, display_images
 
 model = yolov8_heatmap(
-    weight="/content/drive/MyDrive/object detection dataset/axial_t1wce_2_class/runs/detect/train/weights/best.pt", conf_threshold=0.4, renormalize=False,
+    weight="/location/model.pt", conf_threshold=0.4, renormalize=False,
 )
 
 imagelist = model(
-    img_path="/content/drive/MyDrive/object detection dataset/axial_t1wce_2_class/images/test/00022_83.jpg", 
+    img_path="/location/image.jpg", 
     )
 
 display_images(imagelist)
 
 ```
 
-You can choose between:
+You can choose between the following CAM Models for version 1.0:
 
 `GradCAM` , `HiResCAM`, `GradCAMPlusPlus`, `XGradCAM` , `LayerCAM`, `EigenGradCAM` and `EigenCAM`.
