@@ -206,28 +206,10 @@ class yolov8_heatmap:
         return eigencam_image_renormalized
 
     def renormalize_cam(self, boxes, image_float_np, grayscale_cam):
-        """
-        Normalize the CAM to be in the range [0, 1] across the entire image.
-
-        Args:
-            boxes (numpy.ndarray): The bounding boxes.
-            image_float_np (numpy.ndarray): The image as a numpy array of floats in the range [0, 1].
-            grayscale_cam (numpy.ndarray): The CAM as a numpy array of floats in the range [0, 1].
-
-        Returns:
-            numpy.ndarray: The renormalized CAM.
-        """
-        renormalized_cam = np.zeros(grayscale_cam.shape, dtype=np.float32)
-        for x1, y1, x2, y2 in boxes:
-            x1, y1 = max(x1, 0), max(y1, 0)
-            x2, y2 = min(grayscale_cam.shape[1] - 1, x2), min(
-                grayscale_cam.shape[0] - 1, y2
-            )
-            renormalized_cam[y1:y2, x1:x2] = scale_cam_image(
-                grayscale_cam[y1:y2, x1:x2].copy()
-            )
-        renormalized_cam = scale_cam_image(renormalized_cam)
-        eigencam_image_renormalized = show_cam_on_image(image_float_np, renormalized_cam, use_rgb=True)  # type: ignore
+        """Normalize the CAM to be in the range [0, 1] 
+        across the entire image."""
+        renormalized_cam = scale_cam_image(grayscale_cam)
+        eigencam_image_renormalized = show_cam_on_image(image_float_np, renormalized_cam, use_rgb=True) # type: ignore
         return eigencam_image_renormalized
 
     def process(self, img_path):
@@ -295,21 +277,3 @@ class yolov8_heatmap:
             return image_list
         else:
             return [self.process(img_path)]
-
-
-# if __name__ == "__main__":
-#     model = yolov8_heatmap(
-#         weight="/run/media/spritan/New Volume/Github/Pypi/YOLOv8_Explainer/test/yolov8n.pt",
-#         device="cuda:0", # type: ignore
-#         method="EigenCAM",
-#         layer=[10, 12, 14, 16, 18, -3],
-#         backward_type="all",
-#         conf_threshold=0.2,
-#         ratio=0.02,
-#         show_box=True,
-#         renormalize=False,
-#     )
-#     model(
-#         img_path="/run/media/spritan/New Volume/Github/Pypi/YOLOv8_Explainer/test/images",
-#         save_path="/run/media/spritan/New Volume/Github/Pypi/YOLOv8_Explainer/test/results",
-#     )
