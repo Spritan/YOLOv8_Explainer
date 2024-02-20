@@ -22,7 +22,7 @@ setup(
         "Operating System :: OS Independent",
     ],
     install_requires=[
-        "grad-cam == 1.4.8",
+        "grad-cam==1.4.8",
         "ultralytics",
         "Pillow",
         "tqdm",
