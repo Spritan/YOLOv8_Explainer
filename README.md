@@ -3,7 +3,7 @@
 <!-- [![Downloads](https://static.pepy.tech/personalized-badge/grad-cam?period=month&units=international_system&left_color=black&right_color=brightgreen&left_text=Monthly%20Downloads)](https://pepy.tech/project/YOLOv8-Explainer)
 [![Downloads](https://static.pepy.tech/personalized-badge/grad-cam?period=total&units=international_system&left_color=black&right_color=blue&left_text=Total%20Downloads)](https://pepy.tech/project/YOLOv8-Explainer) -->
 ## Simplify your understanding of YOLOv8 Results
-
+This is a package with state of the art methods for Explainable AI for computer vision using YOLOv8. This can be used for diagnosing model predictions, either in production or while developing models. The aim is also to serve as a benchmark of algorithms and metrics for research of new explainability methods.
 
 ### Install Environment & Dependencies
 
