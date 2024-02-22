@@ -1,4 +1,4 @@
-# tutorial at https://www.youtube.com/watch?v=Q-YA_dA8C20
+# tutorial at https://www.youtube.com/watch?v=Q-YA_dA8C20 https://www.youtube.com/watch?v=L7Ry-Fiij-M
 
 site_name: YOLOv8 Explainer
 theme:
@@ -6,6 +6,10 @@ theme:
   features:
     - navigation.tabs
     - navigation.sections
+    - navigation.top
+    - navigation.tracking
+    - navigation.footer
+    - navigation.indexes
     - toc.integrate
     - navigation.top
     - search.suggest
@@ -58,3 +62,11 @@ markdown_extensions:
 
 copyright: |
   &copy 2024 Devraj Kashyap
+
+plugins: 
+ - mkdocstrings
+
+nav:
+  - Home: index.md
+  - Functions : functions.md
+  - References: references.md
