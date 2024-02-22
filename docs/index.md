@@ -56,5 +56,5 @@ You can choose between the following CAM Models for version 0.0.2:
 
 `GradCAM` , `HiResCAM`, `GradCAMPlusPlus`, `XGradCAM` , `LayerCAM`, `EigenGradCAM` and `EigenCAM`.
 
-You can add a single image or a directory images to be used by the `Module`. The output will be a corresponding list of images (list contianing one PIL Image for a single image imput and list contining as many PIL images as Images in the input directory).
+You can add a single image or a directory images to be used by the `Module`. The output will be a corresponding list of images (list containing one PIL Image for a single image input and list containing as many PIL images as Images in the input directory).
 
