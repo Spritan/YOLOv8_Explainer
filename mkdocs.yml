@@ -61,7 +61,7 @@ markdown_extensions:
       emoji_generator: !!python/name:materialx.emoji.to_svg
 
 copyright: |
-  &copy 2024 Proyash Paban Sarma Boarh and Devraj Kashyap
+  &copy 2024 Proyash Paban Sarma Borah and Devraj Kashyap
 
 plugins: 
  - mkdocstrings:
