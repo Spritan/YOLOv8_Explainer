@@ -160,3 +160,4 @@ cython_debug/
 #.idea/
 .vscode
 YOLOv8_Explainer.egg-info/*
+.code-workspace/

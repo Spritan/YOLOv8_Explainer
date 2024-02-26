@@ -1,0 +1,76 @@
+# tutorial at https://www.youtube.com/watch?v=Q-YA_dA8C20 https://www.youtube.com/watch?v=L7Ry-Fiij-M
+
+site_name: YOLOv8 Explainer
+theme:
+  name: material
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.top
+    - navigation.tracking
+    - navigation.footer
+    - navigation.indexes
+    - toc.integrate
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - content.tabs.link
+    - content.code.annotation
+    - content.code.copy
+  language: en
+  palette:
+    - scheme: slate
+      toggle:
+        icon: material/toggle-switch-off-outline 
+        name: Switch to light mode
+      primary: teal
+      accent: purple 
+    - scheme: default
+      toggle:
+        icon: material/toggle-switch
+        name: Switch to dark mode    
+      primary: teal
+      accent: lime
+
+
+extra:
+  social:
+    - icon: fontawesome/brands/github-alt
+      link: https://github.com/dev-rajk
+    - icon: fontawesome/brands/github-alt
+      link: https://github.com/Spritan
+    # - icon: fontawesome/brands/twitter
+    #   link: https://twitter.com/TheJamesWillett
+    # - icon: fontawesome/brands/linkedin
+    #   link: https://www.linkedin.com/in/willettjames/
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - admonition
+  - pymdownx.arithmatex:
+      generic: true
+  - footnotes
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.mark
+  - attr_list
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+
+copyright: |
+  &copy 2024 Devraj Kashyap
+
+plugins: 
+ - mkdocstrings:
+    default_handler: python
+    handlers:
+      python:
+        paths: [src]
+
+nav:
+  - Home: index.md
+  - Functions : functions.md
+  - References: references.md
