@@ -152,7 +152,6 @@ class yolov8_heatmap:
             device (str): The device to use for inference. Defaults to "cuda:0" if a GPU is available, otherwise "cpu".
             method (str): The method to use for computing the CAM. Defaults to "EigenCAM".
             layer (list): The indices of the layers to use for computing the CAM. Defaults to [10, 12, 14, 16, 18, -3].
-            backward_type (str): The type of backward pass to use. Can be "all", "positive", or "negative". Defaults to "all".
             conf_threshold (float): The confidence threshold for detections. Defaults to 0.2.
             ratio (float): The ratio of maximum scores to return. Defaults to 0.02.
             show_box (bool): Whether to show bounding boxes with the CAM. Defaults to True.
