@@ -210,7 +210,7 @@ class yolov8_heatmap:
             numpy.ndarray: The filtered detections.
         """
         result = non_max_suppression(
-            result, conf_thres=self.conf_threshold, iou_thres=0.65)[0]
+            result, conf_thres=self.conf_threshold, iou_thres=0.80)[0]
         return result
 
     def draw_detections(self, box, color, name, img):
@@ -298,16 +298,17 @@ class yolov8_heatmap:
             print(e)
             return
         grayscale_cam = grayscale_cam[0, :]
-        cam_image = show_cam_on_image(
-            img, grayscale_cam, use_rgb=True)  # type: ignore
 
-        pred = self.model(tensor)[0]
-        pred = self.post_process(pred)
+        pred1 = self.model(tensor)[0]
+        pred = self.post_process(pred1)
         if self.renormalize:
             cam_image = self.renormalize_cam(
                 pred[:, :4].cpu().detach().numpy().astype(
                     np.int32), img, grayscale_cam
             )
+        else:
+            cam_image = show_cam_on_image(
+                img, grayscale_cam, use_rgb=True)  # type: ignore
         if self.show_box:
             for data in pred:
                 data = data.cpu().detach().numpy()
