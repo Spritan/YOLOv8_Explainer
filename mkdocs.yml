@@ -72,5 +72,5 @@ plugins:
 
 nav:
   - Home: index.md
-  - Functions : functions.md
+  - Detailed Documentation : functions.md
   - References: references.md
