@@ -177,7 +177,7 @@ class yolov8_heatmap:
         Initialize the YOLOv8 heatmap layer.
         """
         device = device
-        self.backward_type = "all"
+        backward_type = "all"
         ckpt = torch.load(weight)
         model_names = ckpt['model'].names
         model = attempt_load_weights(weight, device)
