@@ -5,12 +5,13 @@ with open("./README.md", "r") as f:
 
 setup(
     name="YOLOv8_Explainer",
-    version="0.0.03",
+    version="0.0.04",
     description="Python packages that enable XAI methods for YOLOv8",
     packages=find_packages(),
     long_description=long_description,
     long_description_content_type="text/markdown",
     url="https://github.com/Spritan/YOLOv8_Explainer",
+    # Github="https://github.com/Spritan/YOLOv8_Explainer",
     author="Spritan",
     author_email="proypabsab@gmail.com",
     license="MIT",
@@ -32,5 +33,8 @@ setup(
     extras_require={
         "dev": ["twine>=4.0.2"],
     },
-    # python_requires=">=3.10",
+    project_urls={
+        'Homepage': 'https://spritan.github.io/YOLOv8_Explainer/',  # Homepage URL
+        'Source': 'https://github.com/Spritan/YOLOv8_Explainer',  # GitHub URL
+    },
 )
