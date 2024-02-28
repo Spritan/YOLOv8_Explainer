@@ -100,7 +100,7 @@ https://arxiv.org/abs/2008.00299 <br>
 Mohammed Bany Muhammad, Mohammed Yeasin`
 
 http://mftp.mmcheng.net/Papers/21TIP_LayerCAM.pdf <br>
-`LayerCAM: Exploring Hierarchical Class Activation Maps for Localization
+`LayerCAM: Exploring Hierarchical Class Activation Maps for Localization <br>
 Peng-Tao Jiang; Chang-Bin Zhang; Qibin Hou; Ming-Ming Cheng; Yunchao Wei`
 
 https://arxiv.org/abs/1905.00780 <br>
