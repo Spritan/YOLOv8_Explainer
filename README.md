@@ -84,15 +84,15 @@ https://arxiv.org/abs/1710.11063 <br>
 Aditya Chattopadhyay, Anirban Sarkar, Prantik Howlader, Vineeth N Balasubramanian`
 
 https://arxiv.org/abs/1910.01279 <br>
-`Score-CAM: Score-Weighted Visual Explanations for Convolutional Neural Networks
+`Score-CAM: Score-Weighted Visual Explanations for Convolutional Neural Networks  
 Haofan Wang, Zifan Wang, Mengnan Du, Fan Yang, Zijian Zhang, Sirui Ding, Piotr Mardziel, Xia Hu`
 
 https://ieeexplore.ieee.org/abstract/document/9093360/ <br>
-`Ablation-cam: Visual explanations for deep convolutional network via gradient-free localization.
+`Ablation-cam: Visual explanations for deep convolutional network via gradient-free localization.  
 Saurabh Desai and Harish G Ramaswamy. In WACV, pages 972–980, 2020`
 
 https://arxiv.org/abs/2008.02312 <br>
-`Axiom-based Grad-CAM: Towards Accurate Visualization and Explanation of CNNs
+`Axiom-based Grad-CAM: Towards Accurate Visualization and Explanation of CNNs  
 Ruigang Fu, Qingyong Hu, Xiaohu Dong, Yulan Guo, Yinghui Gao, Biao Li`
 
 https://arxiv.org/abs/2008.00299 <br>
@@ -100,12 +100,12 @@ https://arxiv.org/abs/2008.00299 <br>
 Mohammed Bany Muhammad, Mohammed Yeasin`
 
 http://mftp.mmcheng.net/Papers/21TIP_LayerCAM.pdf <br>
-`LayerCAM: Exploring Hierarchical Class Activation Maps for Localization
+`LayerCAM: Exploring Hierarchical Class Activation Maps for Localization  
 Peng-Tao Jiang; Chang-Bin Zhang; Qibin Hou; Ming-Ming Cheng; Yunchao Wei`
 
 https://arxiv.org/abs/1905.00780 <br>
-`Full-Gradient Representation for Neural Network Visualization
-Suraj Srinivas, Francois Fleuret`
+`Full-Gradient Representation for Neural Network Visualization  
+\n Suraj Srinivas, Francois Fleuret`
 
 https://arxiv.org/abs/1806.10206 <br>
 `Deep Feature Factorization For Concept Discovery

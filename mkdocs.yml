@@ -4,6 +4,8 @@ site_name: YOLOv8 Explainer
 theme:
   name: material
   features:
+    - search.suggest
+    - search.highlight
     - navigation.tabs
     - navigation.sections
     - navigation.top
@@ -12,25 +14,26 @@ theme:
     - navigation.indexes
     - toc.integrate
     - navigation.top
-    - search.suggest
-    - search.highlight
     - content.tabs.link
     - content.code.annotation
     - content.code.copy
+
   language: en
   palette:
-    - scheme: slate
+    - media: '(prefers-color-scheme: light)'
+      scheme: slate
+      primary: teal
+      accent: amber
       toggle:
-        icon: material/toggle-switch-off-outline 
+        icon: material/lightbulb
         name: Switch to light mode
+    - media: '(prefers-color-scheme: dark)'
+      scheme: default
       primary: teal
-      accent: purple 
-    - scheme: default
+      accent: amber
       toggle:
-        icon: material/toggle-switch
-        name: Switch to dark mode    
-      primary: teal
-      accent: lime
+        icon: material/lightbulb-outline
+        name: Switch to dark mode
 
 
 extra:
@@ -64,6 +67,7 @@ copyright: |
   &copy 2024 Proyash Paban Sarma Borah and Devraj Kashyap
 
 plugins: 
+ - search: null 
  - mkdocstrings:
     default_handler: python
     handlers:
