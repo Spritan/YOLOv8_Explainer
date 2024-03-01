@@ -14,7 +14,7 @@ def letterbox(
     scaleFill=False,
     scaleup=True,
     stride=32,
-) -> tuple[np.ndarray, tuple, tuple]:
+):
     """
     Resize and pad image while meeting stride-multiple constraints.
 
@@ -64,7 +64,7 @@ def letterbox(
     
     return im, ratio, (dw, dh)
 
-def display_images(images: list[Image.Image]) -> None:
+def display_images(images):
     """
     Display a list of PIL images in a grid.
 
