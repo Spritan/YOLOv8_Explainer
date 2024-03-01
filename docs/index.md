@@ -1,7 +1,7 @@
 # Welcome to YOLOv8 Explainer
 
 ## Simplify your understanding of YOLOv8 Results
-This is a package with state of the art methods for Explainable AI for computer vision using YOLOv8. This can be used for diagnosing model predictions, either in production or while developing models. The aim is also to serve as a benchmark of algorithms and metrics for research of new explainability methods.
+This is a package with state of the art Class Activated Mapping(CAM) methods for Explainable AI for computer vision using YOLOv8. This can be used for diagnosing model predictions, either in production or while developing models. The aim is also to serve as a benchmark of algorithms and metrics for research of new explainability methods.
 
 ### Install Environment & Dependencies
 
@@ -37,24 +37,30 @@ model = yolov8_heatmap(
         conf_threshold=0.4, 
         device = "cpu", 
         method = "EigenCAM", 
-        layer=[10, 12, 14, 16, 18, -3],
-        backward_type="all",
+        layer=[12, 17, 21],
         ratio=0.02,
         show_box=True,
         renormalize=False,
 )
 
-imagelist = model(
+images = model(
     img_path="/location/image.jpg", 
     )
 
-display_images(imagelist)
+display_images(images)
 
 ```
+- Here the `from YOLOv8_Explainer import yolov8_heatmap, display_images` allows you to import the required functionalities. 
 
-You can choose between the following CAM Models for version 0.0.2:
+- The line `model = yolov8_heatmap( weight="/location/model.pt", conf_threshold=0.4, device = "cpu", method = "EigenCAM", layer=[12, 17, 21], ratio=0.02,    show_box=True, renormalize=False)` allows the user to pass a pertrained YOLO weight which the CAM is expected to evaluate, along with additional parameters like the desired CAM method target layers, and the confidence threshold.
+
+You can choose between the following CAM Models for version 0.0.5:
 
 `GradCAM` , `HiResCAM`, `GradCAMPlusPlus`, `XGradCAM` , `LayerCAM`, `EigenGradCAM` and `EigenCAM`.
+
+- The line `images = model( img_path="/location/image.jpg" )` passes the images the model will process
+
+- The line `display_images(images)` displays the output of the model, along with the CAM model's output. 
 
 You can add a single image or a directory images to be used by the `Module`. The output will be a corresponding list of images (list containing one PIL Image for a single image input and list containing as many PIL images as Images in the input directory).
 
