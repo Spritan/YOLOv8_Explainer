@@ -5,7 +5,7 @@ with open("./README.md", "r") as f:
 
 setup(
     name="YOLOv8_Explainer",
-    version="0.0.04",
+    version="0.0.05",
     description="Python packages that enable XAI methods for YOLOv8",
     packages=find_packages(),
     long_description=long_description,
