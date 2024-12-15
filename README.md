@@ -37,11 +37,9 @@ from YOLOv8_Explainer import yolov8_heatmap, display_images
 
 model = yolov8_heatmap(
     weight="/location/model.pt", 
-        conf_threshold=0.4, 
-        device = "cpu", 
+        conf_threshold=0.4,  
         method = "EigenCAM", 
         layer=[10, 12, 14, 16, 18, -3],
-        backward_type="all",
         ratio=0.02,
         show_box=True,
         renormalize=False,
