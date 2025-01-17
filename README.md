@@ -15,6 +15,7 @@ To incorporate `YOLOv8-Explainer` into your project as a dependency, execute the
 ```bash
 pip install YOLOv8-Explainer
 ```
+----------
 
 ## Features and Functionality
 
@@ -28,6 +29,7 @@ pip install YOLOv8-Explainer
 - LayerCAM : Spatially weight the activations by positive gradients. Works better especially in lower layers
 - EigenGradCAM : Like EigenCAM but with class discrimination: First principle component of Activations*Grad. Looks like GradCAM, but cleaner
 
+----------
 
 # Using from code as a library
 
@@ -53,12 +55,36 @@ display_images(imagelist)
 
 ```
 
-You can choose between the following CAM Models for version 0.0.2:
+You can choose between the following CAM Models for version 0.0.5:
 
 `GradCAM` , `HiResCAM`, `GradCAMPlusPlus`, `XGradCAM` , `LayerCAM`, `EigenGradCAM` and `EigenCAM`.
 
 You can add a single image or a directory images to be used by the `Module`. The output will be a corresponding list of images (list contianing one PIL Image for a single image imput and list contining as many PIL images as Images in the input directory).
 
+----------
+
+## Citation
+
+If you use this for research, please cite. Here is an example BibTeX entry:
+
+```
+@ARTICLE{Sarma_Borah2024-un,
+  title     = "A comprehensive study on Explainable {AI} using {YOLO} and post
+               hoc method on medical diagnosis",
+  author    = "Sarma Borah, Proyash Paban and Kashyap, Devraj and Laskar,
+               Ruhini Aktar and Sarmah, Ankur Jyoti",
+  journal   = "J. Phys. Conf. Ser.",
+  publisher = "IOP Publishing",
+  volume    =  2919,
+  number    =  1,
+  pages     = "012045",
+  month     =  dec,
+  year      =  2024,
+  copyright = "https://creativecommons.org/licenses/by/4.0/"
+}
+
+```
+----------
 
 # References
 https://github.com/jacobgil/pytorch-grad-cam <br>
