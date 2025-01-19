@@ -34,10 +34,9 @@ from YOLOv8_Explainer import yolov8_heatmap, display_images
 
 model = yolov8_heatmap(
     weight="/location/model.pt", 
-        conf_threshold=0.4, 
-        device = "cpu", 
+        conf_threshold=0.4,  
         method = "EigenCAM", 
-        layer=[12, 17, 21],
+        layer=[10, 12, 14, 16, 18, -3],
         ratio=0.02,
         show_box=True,
         renormalize=False,
@@ -52,7 +51,7 @@ display_images(images)
 ```
 - Here the `from YOLOv8_Explainer import yolov8_heatmap, display_images` allows you to import the required functionalities. 
 
-- The line `model = yolov8_heatmap( weight="/location/model.pt", conf_threshold=0.4, device = "cpu", method = "EigenCAM", layer=[12, 17, 21], ratio=0.02,    show_box=True, renormalize=False)` allows the user to pass a pertrained YOLO weight which the CAM is expected to evaluate, along with additional parameters like the desired CAM method target layers, and the confidence threshold.
+- The line `model = yolov8_heatmap( weight="/location/model.pt", conf_threshold=0.4, method = "EigenCAM", layer=[12, 17, 21], ratio=0.02, show_box=True, renormalize=False)` allows the user to pass a pertrained YOLO weight which the CAM is expected to evaluate, along with additional parameters like the desired CAM method target layers, and the confidence threshold.
 
 You can choose between the following CAM Models for version 0.0.5:
 
@@ -60,7 +59,28 @@ You can choose between the following CAM Models for version 0.0.5:
 
 - The line `images = model( img_path="/location/image.jpg" )` passes the images the model will process
 
-- The line `display_images(images)` displays the output of the model, along with the CAM model's output. 
+- The line `display_images(images)` displays the output of the model (bounding box), along with the CAM model's output (saliency map). 
 
 You can add a single image or a directory images to be used by the `Module`. The output will be a corresponding list of images (list containing one PIL Image for a single image input and list containing as many PIL images as Images in the input directory).
 
+## Citing in Works
+
+If you use this for research, please cite. Here is an example BibTeX entry:
+
+```
+@ARTICLE{Sarma_Borah2024-un,
+  title     = "A comprehensive study on Explainable {AI} using {YOLO} and post
+               hoc method on medical diagnosis",
+  author    = "Sarma Borah, Proyash Paban and Kashyap, Devraj and Laskar,
+               Ruhini Aktar and Sarmah, Ankur Jyoti",
+  journal   = "J. Phys. Conf. Ser.",
+  publisher = "IOP Publishing",
+  volume    =  2919,
+  number    =  1,
+  pages     = "012045",
+  month     =  dec,
+  year      =  2024,
+  copyright = "https://creativecommons.org/licenses/by/4.0/"
+}
+
+```
